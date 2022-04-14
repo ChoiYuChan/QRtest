@@ -5,9 +5,10 @@ const QRTest = (props) => {
   const [data, setData] = useState("No result");
 
   return (
-    <div style={{ width: "300px", height: "500px", background: "#e7e7e7" }}>
+    <div style={{ background: "#e7e7e7", padding: "1rem" }}>
       <h3>QR Reader</h3>
       <QrReader
+        constraints={{ facingMode: "environment" }}
         onResult={(result, error) => {
           if (!!result) {
             setData(result?.text);
@@ -17,7 +18,18 @@ const QRTest = (props) => {
             console.info(error);
           }
         }}
-        style={{ width: "200px", height: "100px", background: "white" }}
+        containerStyle={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+        videoContainerStyle={{
+          width: "300px",
+          height: "300px",
+          background: "white",
+          paddingTop: 0,
+        }}
       />
       <p>{data}</p>
     </div>
