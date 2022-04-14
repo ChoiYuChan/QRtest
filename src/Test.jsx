@@ -5,7 +5,7 @@ const QRTest = (props) => {
   const [data, setData] = useState("No result");
 
   return (
-    <div style={{ background: "#e7e7e7", padding: "1rem" }}>
+    <div style={{ background: "orange", padding: "1rem" }}>
       <h3>QR Reader</h3>
       <QrReader
         constraints={{ facingMode: "environment" }}
