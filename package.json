@@ -1,6 +1,6 @@
 {
   "name": "qr-reader",
-  "homepage": "https://choiyuchan.github.io/QRtest/",
+  "homepage": "https://choiyuchan.github.io/QRtest",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
