@@ -5,7 +5,8 @@ const QRTest = (props) => {
   const [data, setData] = useState("No result");
 
   return (
-    <>
+    <div style={{ width: "300px", height: "300px", background: "#e8f4d3" }}>
+      <h3>QR Reader</h3>
       <QrReader
         onResult={(result, error) => {
           if (!!result) {
@@ -19,7 +20,7 @@ const QRTest = (props) => {
         style={{ width: "200px", height: "100px" }}
       />
       <p>{data}</p>
-    </>
+    </div>
   );
 };
 
