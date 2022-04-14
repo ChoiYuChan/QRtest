@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/QRtest/static/css/main.abd64e84.css",
-    "main.js": "/QRtest/static/js/main.d2c09753.js",
+    "main.js": "/QRtest/static/js/main.fb9bbb5a.js",
     "index.html": "/QRtest/index.html",
     "main.abd64e84.css.map": "/QRtest/static/css/main.abd64e84.css.map",
-    "main.d2c09753.js.map": "/QRtest/static/js/main.d2c09753.js.map"
+    "main.fb9bbb5a.js.map": "/QRtest/static/js/main.fb9bbb5a.js.map"
   },
   "entrypoints": [
     "static/css/main.abd64e84.css",
-    "static/js/main.d2c09753.js"
+    "static/js/main.fb9bbb5a.js"
   ]
 }
