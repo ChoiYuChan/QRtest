@@ -33,8 +33,8 @@ const QRTest = (props) => {
           paddingTop: 0,
         }}
       />
-      <p>{data}</p>
-      {qrData && qrData}
+      {data.includes("https//") ? <a href={data}>{data}</a> : <p>{data}</p>}
+      {/* {qrData && qrData} */}
     </div>
   );
 };
