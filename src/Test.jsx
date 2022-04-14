@@ -3,6 +3,7 @@ import { QrReader } from "react-qr-reader";
 
 const QRTest = (props) => {
   const [data, setData] = useState("No result");
+  const [qrData, setQRdata] = useState();
 
   return (
     <div style={{ background: "orange", padding: "1rem" }}>
@@ -12,6 +13,7 @@ const QRTest = (props) => {
         onResult={(result, error) => {
           if (!!result) {
             setData(result?.text);
+            setQRdata(result);
           }
 
           if (!!error) {
@@ -32,6 +34,7 @@ const QRTest = (props) => {
         }}
       />
       <p>{data}</p>
+      {qrData && qrData}
     </div>
   );
 };
