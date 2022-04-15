@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { QrReader } from "react-qr-reader";
 
-const QRTest = (props) => {
+const QRreader = (props) => {
   const [data, setData] = useState("No result");
-  const [qrData, setQRdata] = useState();
 
   return (
     <div style={{ background: "orange", padding: "1rem" }}>
@@ -13,7 +12,6 @@ const QRTest = (props) => {
         onResult={(result, error) => {
           if (!!result) {
             setData(result?.text);
-            setQRdata(result);
           }
 
           if (!!error) {
@@ -33,10 +31,13 @@ const QRTest = (props) => {
           paddingTop: 0,
         }}
       />
-      {data.includes("https//") ? <a href={data}>{data}</a> : <p>{data}</p>}
-      {/* {qrData && qrData} */}
+      {data.includes("https://") || data.includes("http://") ? (
+        <a href={data}>{data}</a>
+      ) : (
+        <p>{data}</p>
+      )}
     </div>
   );
 };
 
-export default QRTest;
+export default QRreader;

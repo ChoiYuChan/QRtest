@@ -1,20 +1,22 @@
 import "./App.css";
 import QR from "./QRcode";
-import QRTest from "./Test";
+import QRscanner from "./QRscanner";
+import QRreader from "./QRreader";
 
 function App() {
   return (
     <div
       className="App"
       style={{
-        height: "100vh",
+        height: "100%",
         display: "flex",
         flexFlow: "column nowrap",
         alignItems: "center",
         justifyContent: "space-around",
       }}
     >
-      <QRTest />
+      <QRreader />
+      <QRscanner />
       <QR />
     </div>
   );
