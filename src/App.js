@@ -15,7 +15,7 @@ function App() {
         justifyContent: "space-around",
       }}
     >
-      <QRreader />
+      {/* <QRreader /> */}
       <QRscanner />
       <QR />
     </div>

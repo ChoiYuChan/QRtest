@@ -16,7 +16,7 @@ const QRscanner = () => {
       <h4>QR scanner</h4>
       <QrReader
         style={{ width: "300px", height: "300px" }}
-        facingMode="front"
+        facingMode="rear"
         onError={handleError}
         onScan={handleScan}
       />
