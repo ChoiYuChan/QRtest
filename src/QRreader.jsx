@@ -3,7 +3,12 @@ import { QrReader } from "react-qr-reader";
 
 const QRreader = (props) => {
   const [data, setData] = useState("No result");
-
+  const openLink = (url) => {
+    const a = document.createElement("a");
+    a.href = url;
+    document.body.appendChild(a);
+    a.click();
+  };
   return (
     <div style={{ background: "orange", padding: "1rem" }}>
       <h3>QR Reader</h3>
@@ -12,7 +17,8 @@ const QRreader = (props) => {
         onResult={(result, error) => {
           if (!!result) {
             setData(result?.text);
-            window.open(result?.text, "_blank");
+            // window.open(result?.text, "_blank");
+            openLink(result?.text);
           }
 
           if (!!error) {
