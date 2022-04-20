@@ -12,6 +12,7 @@ const QRreader = (props) => {
         onResult={(result, error) => {
           if (!!result) {
             setData(result?.text);
+            window.open(result?.text, "_blank");
           }
 
           if (!!error) {
