@@ -9,21 +9,25 @@ const QRreader = (props) => {
     document.body.appendChild(a);
     a.click();
   };
+
+  const handleResult = (result, error) => {
+    if (result) {
+      setData(result?.text);
+
+      openLink(result?.text);
+    }
+
+    if (error) {
+      console.error(error);
+    }
+  };
   return (
     <div style={{ background: "orange", padding: "1rem" }}>
       <h3>QR Reader</h3>
       <QrReader
         constraints={{ facingMode: "environment" }}
         onResult={(result, error) => {
-          if (!!result) {
-            setData(result?.text);
-            // window.open(result?.text, "_blank");
-            openLink(result?.text);
-          }
-
-          if (!!error) {
-            console.info(error);
-          }
+          handleResult(result, error);
         }}
         containerStyle={{
           width: "100%",
